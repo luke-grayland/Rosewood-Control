@@ -1,0 +1,17 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="RosewoodControl.Components.MainSection">
+    <Grid ColumnDefinitions="*, Auto, *" Background="Gray">
+        <StackPanel Grid.Column="0" Background="Gray"></StackPanel>
+        <Grid Grid.Column="1" RowDefinitions="*, Auto" Background="Bisque" Width="150">
+            <Rectangle Grid.Row="0" Fill="Gainsboro"></Rectangle>
+            <Grid Grid.Row="1" Height="50" VerticalAlignment="Stretch">
+                <Label FontWeight="Medium" VerticalAlignment="Center" HorizontalAlignment="Center">Gain</Label>
+            </Grid>
+        </Grid>
+        <StackPanel Grid.Column="2" Background="Gray"></StackPanel>
+    </Grid>
+</UserControl>

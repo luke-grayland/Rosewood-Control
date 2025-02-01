@@ -1,0 +1,14 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="RosewoodControl.Components.BottomBar">
+    <Grid Height="40" Background="Green" ColumnDefinitions="Auto, *, Auto">
+        <Grid Background="Aqua" Width="80" VerticalAlignment="Stretch" Grid.Column="0">
+            <Label VerticalAlignment="Center" HorizontalAlignment="Center">Options</Label>
+        </Grid>
+        <Rectangle Grid.Column="1"></Rectangle>
+        <Rectangle Fill="Brown" Grid.Column="2" Width="80"/>
+    </Grid>
+</UserControl>

@@ -1,0 +1,17 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="RosewoodControl.Components.TitleBar">
+    <Grid Background="Coral" Height="40" ColumnDefinitions="Auto, Auto, *, Auto, Auto">
+        <Rectangle Grid.Column="0" Fill="Orange" Width="40"></Rectangle>
+        <Rectangle Grid.Column="1" Fill="Blue" Width="40"></Rectangle>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="2">
+            <Label FontWeight="Black">ROSEWOOD</Label>
+            <Label>CONTROL PANEL</Label>
+        </StackPanel>
+        <Rectangle Grid.Column="3" Fill="Red" Width="40"></Rectangle>
+        <Rectangle Grid.Column="4" Fill="Yellow" Width="40"></Rectangle>
+    </Grid>
+</UserControl>
