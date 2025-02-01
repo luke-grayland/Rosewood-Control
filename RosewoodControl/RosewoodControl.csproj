@@ -28,5 +28,10 @@
     <ItemGroup>
       <None Remove="Assets\Images\settings-icon-2.svg" />
       <AvaloniaResource Include="Assets\Images\settings-icon-2.svg" />
+      <None Remove="Assets\Images\profile-icon.svg" />
+      <None Remove="Assets\Images\profile-icon-2.svg" />
+      <AvaloniaResource Include="Assets\Images\profile-icon-2.svg" />
+      <None Remove="Assets\Images\rose.svg" />
+      <AvaloniaResource Include="Assets\Images\rose.svg" />
     </ItemGroup>
 </Project>
