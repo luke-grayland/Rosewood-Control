@@ -4,14 +4,55 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="RosewoodControl.Components.MainSection">
-    <Grid ColumnDefinitions="*, Auto, *" Background="Gray">
-        <StackPanel Grid.Column="0" Background="Gray"></StackPanel>
+    <UserControl.Styles>
+        <Style Selector="Label">
+            <Setter Property="FontSize" Value="15"></Setter>
+            <Setter Property="FontWeight" Value="Medium"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+            
+        </Style>
+    </UserControl.Styles>
+    
+    <Grid ColumnDefinitions="3*, Auto, *, Auto, 3*" Background="Gray">
+        <StackPanel Grid.Column="0" Background="Bisque"/>
         <Grid Grid.Column="1" RowDefinitions="*, Auto" Background="Bisque" Width="150">
-            <Rectangle Grid.Row="0" Fill="Gainsboro"></Rectangle>
-            <Grid Grid.Row="1" Height="50" VerticalAlignment="Stretch">
-                <Label FontWeight="Medium" VerticalAlignment="Center" HorizontalAlignment="Center">Gain</Label>
+            
+            
+            <!-- Meter -->
+            <Grid Grid.Row="0" Background="#1a1c20" RowDefinitions="3*,3*,3*,9*,5*,4*,9*,9*,9*,6*,Auto">
+                <Grid.Styles>
+                    <Style Selector="Label">
+                        <Setter Property="FontSize" Value="12"></Setter>
+                        <Setter Property="HorizontalAlignment" Value="Right"></Setter>
+                    </Style>
+                </Grid.Styles>
+                <Label Grid.Row="0">0 — </Label>
+                <Label Grid.Row="1">-3 — </Label>
+                <Label Grid.Row="2">-6 — </Label>
+                <Label Grid.Row="3">-9 — </Label>
+                <Label Grid.Row="4">-18 — </Label>
+                <Label Grid.Row="5">-23 — </Label>
+                <Label Grid.Row="6">-27 — </Label>
+                <Label Grid.Row="7">-36 — </Label>
+                <Label Grid.Row="8">-45 — </Label>
+                <Label Grid.Row="9">-54 — </Label>
+                <Label Grid.Row="10"></Label>
+                
+            </Grid>
+            
+            
+            
+            <Grid Grid.Row="1" Height="50" Background="#1a1c20" VerticalAlignment="Stretch">
+                <Label VerticalAlignment="Center" Foreground="White" HorizontalAlignment="Center">Volume</Label>
             </Grid>
         </Grid>
-        <StackPanel Grid.Column="2" Background="Gray"></StackPanel>
+        <StackPanel Grid.Column="2" Background="Bisque"/>
+        <Grid Grid.Column="3" RowDefinitions="*, Auto" Background="Bisque" Width="150">
+            <Rectangle Grid.Row="0" Fill="SeaGreen"></Rectangle>
+            <Grid Grid.Row="1" Height="50" Background="#1a1c20" VerticalAlignment="Stretch">
+                <Label VerticalAlignment="Center" HorizontalAlignment="Center">Gain</Label>
+            </Grid>
+        </Grid>
+        <StackPanel Grid.Column="4" Background="Bisque"/>
     </Grid>
 </UserControl>

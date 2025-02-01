@@ -4,11 +4,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="RosewoodControl.Components.BottomBar">
-    <Grid Height="40" Background="Green" ColumnDefinitions="Auto, *, Auto">
-        <Grid Background="Aqua" Width="80" VerticalAlignment="Stretch" Grid.Column="0">
-            <Label VerticalAlignment="Center" HorizontalAlignment="Center">Options</Label>
-        </Grid>
-        <Rectangle Grid.Column="1"></Rectangle>
-        <Rectangle Fill="Brown" Grid.Column="2" Width="80"/>
+    <Grid Height="40" Background="Linen" ColumnDefinitions="Auto, *, Auto">
+        <Button Grid.Column="0" Margin="5 0 0 0" HorizontalAlignment="Center" FontWeight="Medium">Pi Switch</Button>
+        <Rectangle Grid.Column="3"></Rectangle>
+        <Button Grid.Column="4" Margin="0 0 5 0" HorizontalAlignment="Center" FontWeight="Medium">Options</Button>
     </Grid>
 </UserControl>
