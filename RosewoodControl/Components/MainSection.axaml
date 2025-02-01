@@ -12,13 +12,9 @@
             
         </Style>
     </UserControl.Styles>
-    
     <Grid ColumnDefinitions="3*, Auto, *, Auto, 3*" Background="Gray">
         <StackPanel Grid.Column="0" Background="Bisque"/>
         <Grid Grid.Column="1" RowDefinitions="*, Auto" Background="Bisque" Width="150">
-            
-            
-            <!-- Meter -->
             <Grid Grid.Row="0" Background="#1a1c20" ColumnDefinitions="*, *, *">
                 <Grid.Styles>
                     <Style Selector="Label">
@@ -44,10 +40,10 @@
                     <Label Grid.Row="9">-54 —</Label>
                     <Label Grid.Row="10"></Label>
                 </Grid>
-                <Grid Grid.Column="1" RowDefinitions="*, Auto">
+                <!-- Row definitions control meter level currently -->
+                <Grid Grid.Column="1" RowDefinitions="23*, 37*" Margin="3,10,3,0">
                     <Rectangle Grid.Row="0"></Rectangle>
-                    <!-- Height below controls meter level -->
-                    <Rectangle Grid.Row="1" Fill="white" Height="95"/>
+                    <Rectangle Grid.Row="1" Fill="white"/>
                 </Grid>
                 <Grid Grid.Column="2" Width="40" Background="#1a1c20" 
                       RowDefinitions="3*,3*,3*,9*,5*,4*,9*,9*,9*,6*,Auto">
@@ -64,11 +60,6 @@
                     <Label Grid.Row="10"></Label>
                 </Grid>
             </Grid>
-                
-                
-            
-            
-            
             <Grid Grid.Row="1" Height="50" Background="#1a1c20" VerticalAlignment="Stretch">
                 <Label VerticalAlignment="Center" Foreground="White" HorizontalAlignment="Center">Volume</Label>
             </Grid>
