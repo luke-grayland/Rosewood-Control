@@ -4,8 +4,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="RosewoodControl.Components.TitleBar">
-    <Grid Background="Coral" Height="40" ColumnDefinitions="Auto, *, Auto, Auto">
+    <Grid Background="#005A8D" Height="40" ColumnDefinitions="Auto, *, Auto, Auto">
         <Grid.Styles>
+            <Style Selector="Label">
+                <Setter Property="Foreground" Value="White"></Setter>
+            </Style>
             <Style Selector="Button">
                 <Setter Property="Background" Value="Transparent"></Setter>
             </Style>
