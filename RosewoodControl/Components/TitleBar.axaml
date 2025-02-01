@@ -5,6 +5,23 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="RosewoodControl.Components.TitleBar">
     <Grid Background="Coral" Height="40" ColumnDefinitions="Auto, Auto, *, Auto, Auto">
+        <Grid.Styles>
+            <Style Selector="Button">
+                <Setter Property="Background" Value="Transparent"></Setter>
+            </Style>
+            <Style Selector="Button:pointerover">
+                <Setter Property="Cursor" Value="Hand"/>
+                <Setter Property="Transitions">
+                    <Transitions>
+                        <TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.1"/>
+                    </Transitions>
+                </Setter>
+                <Setter Property="RenderTransform" Value="scale(1.07)"/>
+            </Style>
+            <Style Selector="Button:pointerover /template/ ContentPresenter">
+                <Setter Property="Background" Value="Transparent"></Setter>
+            </Style>
+        </Grid.Styles>
         <Rectangle Grid.Column="0" Fill="Orange" Width="40"></Rectangle>
         <Rectangle Grid.Column="1" Fill="Blue" Width="40"></Rectangle>
         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="2">
@@ -12,6 +29,9 @@
             <Label>CONTROL PANEL</Label>
         </StackPanel>
         <Rectangle Grid.Column="3" Fill="Red" Width="40"></Rectangle>
-        <Rectangle Grid.Column="4" Fill="Yellow" Width="40"></Rectangle>
+        <!-- <Rectangle Grid.Column="4" Fill="Yellow" Width="40"></Rectangle> -->
+        <Button Grid.Column="4" Width="40">
+            <Image Source="{SvgImage /Assets/Images/settings-icon-2.svg}"></Image>
+        </Button>
     </Grid>
 </UserControl>

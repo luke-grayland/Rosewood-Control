@@ -41,7 +41,7 @@
                     <Label Grid.Row="10"></Label>
                 </Grid>
                 <!-- Row definitions control meter level currently -->
-                <Grid Grid.Column="1" RowDefinitions="23*, 37*" Margin="3,10,3,0">
+                <Grid Grid.Column="1" RowDefinitions="23*, 37*" Margin="5,10,5,0">
                     <Rectangle Grid.Row="0"></Rectangle>
                     <Rectangle Grid.Row="1" Fill="white"/>
                 </Grid>
