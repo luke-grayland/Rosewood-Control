@@ -4,6 +4,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="RosewoodControl.MainWindow"
+        Width="800" Height="500"
         Title="RosewoodControl">
-    Welcome to Avalonia!
+    <StackPanel>
+        <!-- Title bar -->
+        <Grid Background="Coral" Height="40" ColumnDefinitions="Auto, *, Auto, Auto">
+            <Rectangle Grid.Column="0" Fill="Blue" Width="40"></Rectangle>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1">
+                <Label FontWeight="Black">ROSEWOOD</Label>
+                <Label>CONTROL PANEL</Label>
+            </StackPanel>
+            <Rectangle Grid.Column="2" Fill="Red" Width="40"></Rectangle>
+            <Rectangle Grid.Column="3" Fill="Yellow" Width="40"></Rectangle>
+        </Grid>
+        
+        <!-- Main section -->
+        <Grid>
+            
+        </Grid>
+        
+        <!-- Bottom bar -->
+        <Grid ColumnDefinitions="Auto, *, Auto">
+            
+        </Grid>
+    </StackPanel>
 </Window>
