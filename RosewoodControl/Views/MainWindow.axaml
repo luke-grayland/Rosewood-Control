@@ -1,14 +1,14 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="using:RosewoodControlV2.ViewModels"
+        xmlns:vm="using:RosewoodControl.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:components="clr-namespace:RosewoodControlV2.Views.Components"
+        xmlns:components="clr-namespace:RosewoodControl.Views.Components"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="RosewoodControlV2.Views.MainWindow"
+        x:Class="RosewoodControl.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Width="800" Height="500"
-        Title="RosewoodControlV2">
+        Title="RosewoodControl">
 
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,

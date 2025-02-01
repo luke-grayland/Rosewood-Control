@@ -1,7 +1,7 @@
 ﻿using Avalonia;
 using System;
 
-namespace RosewoodControlV2;
+namespace RosewoodControl;
 
 sealed class Program
 {

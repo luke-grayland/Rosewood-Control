@@ -1,9 +1,9 @@
 using System;
 using Avalonia.Controls;
 using Avalonia.Controls.Templates;
-using RosewoodControlV2.ViewModels;
+using RosewoodControl.ViewModels;
 
-namespace RosewoodControlV2;
+namespace RosewoodControl;
 
 public class ViewLocator : IDataTemplate
 {

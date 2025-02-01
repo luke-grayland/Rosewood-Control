@@ -1,6 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 
-namespace RosewoodControlV2.ViewModels;
+namespace RosewoodControl.ViewModels;
 
 public class ViewModelBase : ObservableObject
 {

@@ -4,10 +4,10 @@ using Avalonia.Data.Core;
 using Avalonia.Data.Core.Plugins;
 using System.Linq;
 using Avalonia.Markup.Xaml;
-using RosewoodControlV2.ViewModels;
-using RosewoodControlV2.Views;
+using RosewoodControl.ViewModels;
+using RosewoodControl.Views;
 
-namespace RosewoodControlV2;
+namespace RosewoodControl;
 
 public partial class App : Application
 {

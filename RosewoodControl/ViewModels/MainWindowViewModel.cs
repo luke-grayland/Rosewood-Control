@@ -1,4 +1,4 @@
-﻿namespace RosewoodControlV2.ViewModels;
+﻿namespace RosewoodControl.ViewModels;
 
 public partial class MainWindowViewModel : ViewModelBase
 {
