@@ -1,0 +1,25 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:RosewoodControlV2.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:components="clr-namespace:RosewoodControlV2.Views.Components"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="RosewoodControlV2.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Width="800" Height="500"
+        Title="RosewoodControlV2">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+    <Grid RowDefinitions="Auto, *, Auto">
+        <components:TitleBar Grid.Row="0"></components:TitleBar>
+        <components:MainSection Grid.Row="1"></components:MainSection>
+        <components:BottomBar Grid.Row="2"></components:BottomBar>
+    </Grid>
+
+</Window>

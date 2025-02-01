@@ -2,11 +2,11 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
-namespace RosewoodControl.Components;
+namespace RosewoodControlV2.Views.Components;
 
-public partial class MainSection : UserControl
+public partial class TitleBar : UserControl
 {
-    public MainSection()
+    public TitleBar()
     {
         InitializeComponent();
     }

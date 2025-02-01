@@ -1,6 +1,6 @@
 using Avalonia.Controls;
 
-namespace RosewoodControl;
+namespace RosewoodControlV2.Views;
 
 public partial class MainWindow : Window
 {

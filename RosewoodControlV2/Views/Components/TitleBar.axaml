@@ -3,7 +3,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="RosewoodControl.Components.TitleBar">
+             x:Class="RosewoodControlV2.Views.Components.TitleBar">
     <Grid Background="#005A8D" Height="40" ColumnDefinitions="Auto, *, Auto, Auto">
         <Grid.Styles>
             <Style Selector="Label">
@@ -26,17 +26,17 @@
             </Style>
         </Grid.Styles>
         <Grid Grid.Column="0" Width="40">
-            <Image Source="{SvgImage /Assets/Images/rose.svg}" Width="35"></Image>
+            <Image Source="/Assets/Images/png/rose-icon-5.png" Width="35"></Image>
         </Grid>
         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1">
             <Label FontWeight="Black">ROSEWOOD</Label>
             <Label>CONTROL PANEL</Label>
         </StackPanel>
         <Button Grid.Column="2" Width="40">
-            <Image Source="{SvgImage /Assets/Images/profile-icon-2.svg}"></Image>
+            <Image Source="/Assets/Images/png/profile-icon-5.png"></Image>
         </Button>
         <Button Grid.Column="3" Width="40">
-            <Image Source="{SvgImage /Assets/Images/settings-icon-2.svg}"></Image>
+            <Image Source="/Assets/Images/png/settings-icon-5.png"></Image>
         </Button>
     </Grid>
 </UserControl>
