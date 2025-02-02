@@ -15,6 +15,7 @@
             </Style>
             <Style Selector="Button:pointerover">
                 <Setter Property="Cursor" Value="Hand"/>
+                <Setter Property="Foreground" Value="White"/>
             </Style>
             <Style Selector="Button:pointerover">
                 <Setter Property="Transitions">
@@ -25,7 +26,8 @@
                 <Setter Property="RenderTransform" Value="scale(1.03)"/>
             </Style>
             <Style Selector="Button:pointerover /template/ ContentPresenter">
-                <Setter Property="Background" Value="#022E57"></Setter>
+                <Setter Property="Background" Value="#022649"></Setter>
+                <Setter Property="Foreground" Value="White"></Setter>
             </Style>
         </Grid.Styles>
         
