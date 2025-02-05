@@ -3,7 +3,7 @@
              x:Class="RosewoodControl.App"
              xmlns:local="using:RosewoodControl"
              RequestedThemeVariant="Default">
-             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+    <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 
     <Application.DataTemplates>
         <local:ViewLocator/>
@@ -11,5 +11,13 @@
   
     <Application.Styles>
         <FluentTheme />
+        <StyleInclude Source="Views/Components/SpeakerControl.axaml"></StyleInclude>
     </Application.Styles>
+
+    <Application.Resources>
+        <SolidColorBrush x:Key="StatusActive">Green</SolidColorBrush>
+        <SolidColorBrush x:Key="StatusBlown">DarkRed</SolidColorBrush>
+        <SolidColorBrush x:Key="StatusOffline">Gray</SolidColorBrush>
+    </Application.Resources>
+         
 </Application>

@@ -1,0 +1,25 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="using:RosewoodControl.Views.Components">
+    <Design.PreviewWith>
+        <controls:SpeakerControl />
+    </Design.PreviewWith>
+
+    <Style Selector="controls|SpeakerControl">
+        <!-- Set Defaults -->
+        <Setter Property="Foreground" Value="White"></Setter>
+        <Setter Property="Template">
+            <ControlTemplate>
+                <StackPanel Width="100" Background="Transparent" Margin="10">
+                    <Image Source="../../Assets/Images/png/speaker.png" Width="100"/>
+                    <Border Margin="0,3,0,0" CornerRadius="10" Background="{DynamicResource StatusActive}" 
+                            Width="100" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <StackPanel>
+                            <Label HorizontalAlignment="Center" Foreground="White" Content="ACTIVE"></Label>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+</Styles>
