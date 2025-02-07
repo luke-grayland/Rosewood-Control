@@ -10,13 +10,13 @@ namespace RosewoodControl.Views.Components;
 public partial class MainSection : UserControl
 {
     private readonly HubConnection _hubConnection;
-    
+
     public MainSection()
     {
         InitializeComponent();
         _hubConnection = App.Services.GetRequiredService<HubConnection>();
     }
-
+    
     private void GainSlider_OnPropertyChanged(object? sender, AvaloniaPropertyChangedEventArgs e)
     {
         if (e.NewValue is double newGainSliderVal)

@@ -76,10 +76,10 @@
         <StackPanel Grid.Column="2" Background="#FFF5FD"/>
         <!-- Monitors-->
         <Grid Grid.Column="3" RowDefinitions="*,*" ColumnDefinitions="*,*" Background="#FFF5FD">
-            <components:SpeakerControl Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
-            <components:SpeakerControl Grid.Row="0" Grid.Column="1" VerticalAlignment="Center"/>
-            <components:SpeakerControl Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
-            <components:SpeakerControl Grid.Row="1" Grid.Column="1" VerticalAlignment="Center"/>
+            <components:SpeakerControl StatusText="ACTIVE" StatusColour="#009933" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
+            <components:SpeakerControl StatusText="BLOWN" StatusColour="#cc0000" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center"/>
+            <components:SpeakerControl StatusText="OFFLINE" StatusColour="#666699" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
+            <components:SpeakerControl StatusText="OFFLINE" StatusColour="#666699" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center"/>
         </Grid>
         <!-- Spacer -->
         <StackPanel Grid.Column="4" Background="#FFF5FD"/>
