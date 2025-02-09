@@ -9,12 +9,14 @@ using Microsoft.AspNetCore.SignalR.Client;
 using Microsoft.Extensions.DependencyInjection;
 using RosewoodControl.ViewModels;
 using RosewoodControl.Views;
+using Microsoft.Extensions.Configuration;
 
 namespace RosewoodControl;
 
 public partial class App : Application
 {
-    public static IServiceProvider Services { get; private set; } = null!;
+    public static IServiceProvider? Services { get; private set; }
+    private static IConfiguration? Configuration { get; set; }
 
     public override void Initialize()
     {
@@ -42,18 +44,29 @@ public partial class App : Application
 
     private void ConfigureServices(IServiceCollection services)
     {
-        services.AddSingleton<HubConnection>(provider =>
+        var configurationBuilder = new ConfigurationBuilder()
+            .SetBasePath(AppContext.BaseDirectory)
+            .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+        
+        Configuration = configurationBuilder.Build();
+        services.AddSingleton(Configuration);
+        
+        services.AddSingleton<HubConnection>(_ =>
         {
             try
             {
-                Console.WriteLine("Attempting to connect to hub");
+                var hubUrl = Configuration["AppSettings:HubUrl"] ??
+                             throw new Exception("Unable to read Hub URL from config");
+                
+                Console.WriteLine($"Attempting to connect to hub: {hubUrl}");
                 var connection = new HubConnectionBuilder()
-                    .WithUrl("https://rosewood-hub-a8bcgwabbqhxephe.ukwest-01.azurewebsites.net/DeviceHub")
+                    .WithUrl(hubUrl)
                     .WithAutomaticReconnect()
                     .Build();
 
-                connection.Reconnecting += (error) =>
+                connection.Reconnecting += (ex) =>
                 {
+                    Console.WriteLine($"Disconnected with error: {ex?.Message ?? "[none]"}");
                     Console.WriteLine("Reconnecting...");
                     return Task.CompletedTask;
                 };
