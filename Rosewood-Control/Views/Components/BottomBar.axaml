@@ -1,0 +1,38 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="RosewoodControl.Views.Components.BottomBar">
+    <Grid Height="40" Background="#005A8D" ColumnDefinitions="Auto, *, Auto">
+        <Grid.Styles>
+            <Style Selector="Label">
+                <Setter Property="FontWeight" Value="Thin"></Setter>
+            </Style>
+            <Style Selector="Button">
+                <Setter Property="Background" Value="#022E57"></Setter>
+                <Setter Property="Foreground" Value="White"></Setter>
+            </Style>
+            <Style Selector="Button:pointerover">
+                <Setter Property="Cursor" Value="Hand"/>
+                <Setter Property="Foreground" Value="White"/>
+            </Style>
+            <Style Selector="Button:pointerover">
+                <Setter Property="Transitions">
+                    <Transitions>
+                        <TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.1"/>
+                    </Transitions>
+                </Setter>
+                <Setter Property="RenderTransform" Value="scale(1.03)"/>
+            </Style>
+            <Style Selector="Button:pointerover /template/ ContentPresenter">
+                <Setter Property="Background" Value="#022649"></Setter>
+                <Setter Property="Foreground" Value="White"></Setter>
+            </Style>
+        </Grid.Styles>
+        
+        <Button Grid.Column="0" Margin="5 0 0 0" HorizontalAlignment="Center">PI SWITCH</Button>
+        <Rectangle Grid.Column="1"></Rectangle>
+        <Button Grid.Column="2" Margin="0 0 5 0" HorizontalAlignment="Center">OPTIONS</Button>
+    </Grid>
+</UserControl>

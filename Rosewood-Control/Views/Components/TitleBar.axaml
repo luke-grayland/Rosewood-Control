@@ -1,0 +1,42 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="RosewoodControl.Views.Components.TitleBar">
+    <Grid Background="#005A8D" Height="40" ColumnDefinitions="Auto, *, Auto, Auto">
+        <Grid.Styles>
+            <Style Selector="Label">
+                <Setter Property="Foreground" Value="White"></Setter>
+            </Style>
+            <Style Selector="Button">
+                <Setter Property="Background" Value="Transparent"></Setter>
+            </Style>
+            <Style Selector="Button:pointerover">
+                <Setter Property="Cursor" Value="Hand"/>
+                <Setter Property="Transitions">
+                    <Transitions>
+                        <TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.1"/>
+                    </Transitions>
+                </Setter>
+                <Setter Property="RenderTransform" Value="scale(1.08)"/>
+            </Style>
+            <Style Selector="Button:pointerover /template/ ContentPresenter">
+                <Setter Property="Background" Value="Transparent"></Setter>
+            </Style>
+        </Grid.Styles>
+        <Grid Grid.Column="0" Width="40">
+            <Image Source="/Assets/Images/png/rose-icon-5.png" Width="35"></Image>
+        </Grid>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1">
+            <Label FontWeight="Black">ROSEWOOD</Label>
+            <Label>CONTROL PANEL</Label>
+        </StackPanel>
+        <Button Grid.Column="2" Width="40">
+            <Image Source="/Assets/Images/png/profile-icon-5.png"></Image>
+        </Button>
+        <Button Grid.Column="3" Width="40">
+            <Image Source="/Assets/Images/png/settings-icon-5.png"></Image>
+        </Button>
+    </Grid>
+</UserControl>
