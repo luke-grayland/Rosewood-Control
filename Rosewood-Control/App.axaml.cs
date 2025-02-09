@@ -1,7 +1,6 @@
 using System;
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
-using Avalonia.Data.Core;
 using Avalonia.Data.Core.Plugins;
 using System.Linq;
 using System.Threading.Tasks;
@@ -15,8 +14,8 @@ namespace RosewoodControl;
 
 public partial class App : Application
 {
-    public static IServiceProvider Services { get; private set; }
-    
+    public static IServiceProvider Services { get; private set; } = null!;
+
     public override void Initialize()
     {
         AvaloniaXamlLoader.Load(this);
@@ -31,9 +30,10 @@ public partial class App : Application
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
             DisableAvaloniaDataAnnotationValidation();
+            var mainWindowViewModel = Services.GetService<MainWindowViewModel>();
             desktop.MainWindow = new MainWindow
             {
-                DataContext = new MainWindowViewModel(),
+                DataContext = mainWindowViewModel
             };
         }
 
@@ -68,6 +68,8 @@ public partial class App : Application
                 throw;
             }
         });
+
+        services.AddSingleton<MainWindowViewModel>();
     }
     
     private void DisableAvaloniaDataAnnotationValidation()

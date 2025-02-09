@@ -1,4 +1,6 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿using System;
+using CommunityToolkit.Mvvm.ComponentModel;
+using Microsoft.AspNetCore.SignalR.Client;
 using RosewoodControl.Constants;
 using RosewoodControl.Models;
 
@@ -17,8 +19,10 @@ public partial class MainWindowViewModel : ViewModelBase
     
     [ObservableProperty]
     private Speaker _speaker4;
+
+    private HubConnection _hubConnection;
     
-    public MainWindowViewModel()
+    public MainWindowViewModel(HubConnection hubConnection)
     {
         Speaker1 = new();
         Speaker2 = new();
@@ -35,5 +39,25 @@ public partial class MainWindowViewModel : ViewModelBase
         
         Speaker2.Status = SpeakerConst.Status.Active;
         Speaker2.Colour = SpeakerConst.Colour.Active;
+
+        _hubConnection = hubConnection;
+        _hubConnection.On<string, string>("ReceiveDeviceData", LogOnMessage);
+    }
+
+    private void LogOnMessage(string deviceId, string data)
+    {
+        if (data == "1")
+        {
+            Speaker2.Status = SpeakerConst.Status.Blown;
+            Speaker2.Colour = SpeakerConst.Colour.Blown;
+        }
+        
+        if (data == "2")
+        {
+            Speaker2.Status = SpeakerConst.Status.Active;
+            Speaker2.Colour = SpeakerConst.Colour.Active;
+        }
+        
+        Console.WriteLine($"{deviceId}: {data}");
     }
 }
