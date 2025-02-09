@@ -8,7 +8,7 @@
         x:Class="RosewoodControl.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Width="800" Height="500"
-        Title="RosewoodControl">
+        Title="Rosewood-Control">
 
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,

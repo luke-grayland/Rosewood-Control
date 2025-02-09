@@ -48,7 +48,7 @@ public partial class App : Application
             {
                 Console.WriteLine("Attempting to connect to hub");
                 var connection = new HubConnectionBuilder()
-                    .WithUrl("https://localhost:7181/DeviceHub")
+                    .WithUrl("https://rosewood-hub-a8bcgwabbqhxephe.ukwest-01.azurewebsites.net/DeviceHub")
                     .WithAutomaticReconnect()
                     .Build();
 
